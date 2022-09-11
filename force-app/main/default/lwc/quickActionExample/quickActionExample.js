@@ -10,9 +10,10 @@ export default class ParentComponent extends LightningElement {
 
     handleDialogResponse(event) {
         const userResponse = event.detail.response;
+        this.isDialogVisible = false;
 
         if (userResponse) {
-            // proceed
+            // confirmed
             this.dispatchEvent(
                 new ShowToastEvent({
                     title: "Confirmed!",
@@ -20,18 +21,15 @@ export default class ParentComponent extends LightningElement {
                 })
             );
 
-            this.isDialogVisible = false;
             return;
         }
 
-        // cancel;
+        // cancelled
         this.dispatchEvent(
             new ShowToastEvent({
                 title: "Cancelled!",
                 variant: "info"
             })
         );
-
-        this.isDialogVisible = false;
     }
 }
