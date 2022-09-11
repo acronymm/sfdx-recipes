@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Akrom Saidkamolov
+  @group             : i2Max
+  @last modified on  : 12-09-2022
+  @last modified by  : Akrom Saidkamolov
+-->
+<template>
+    <lightning-quick-action-panel header="Quick Action Example">
+        <lightning-button label="Show Custom Dialog" onclick={handleClick}> </lightning-button>
+        <c-confirmation-dialog
+            title="Custom Dialog"
+            message="Your message goes here..."
+            confirm-label="Yes"
+            cancel-label="No"
+            show-title="true"
+            visible={isDialogVisible}
+            onresponse={handleDialogResponse}
+        ></c-confirmation-dialog>
+    </lightning-quick-action-panel>
+</template>
