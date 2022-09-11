@@ -1,6 +1,7 @@
 {
-    "orgName": "acronym company",
+    "orgName": "SFDX company",
     "edition": "Developer",
+    "language": "en_US",
     "features": ["EnableSetPasswordInApi"],
     "settings": {
         "lightningExperienceSettings": {
